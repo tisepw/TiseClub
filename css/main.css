@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("../images/side-wave_background.png");
+    background-size: cover;
+    background-position: top;
+    font-family: 'Poppins';
+}
+
+.WelcomeTo {
+    user-select: none;
+    color: white;
+    font-size: 100px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.TiseClub {
+    user-select: none;
+    font-size: 110px;
+    color:#00e9ff;
+    background: linear-gradient(120deg, #c500e8, #00e9ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.25));
+}
+
+.LoginTextBox {
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-family: 'Poppins';
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border: 0;
+    outline: 0;
+}
+
+.LoginTextBox::placeholder {
+    color: rgba(255, 255, 255, 0.40);
+}
+
+.LoginButton {
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    font-family: 'Poppins';
+    font-size: 20px;
+    color: white;
+}
+
+style attribute {
+    --text: #ffffff
+    --background: #510FEB;
+    --primary: #c500e8;
+    --secondary: #3a64c6;
+    --accent: #00e9ff;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }

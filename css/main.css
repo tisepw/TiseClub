@@ -14,8 +14,9 @@
 
 body {
     background-image: url("../images/side-wave_background.png");
-    background-size: cover;
-    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     font-family: 'Poppins';
 }
 

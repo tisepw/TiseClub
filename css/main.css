@@ -14,6 +14,10 @@
 	margin: 0;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	background-image: url("../images/side-wave_background.png");
 	background-repeat: no-repeat;
@@ -21,29 +25,37 @@ body {
 	background-position: center;
 	background-size: cover;
 	font-family: 'Poppins';
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.PageWrapper {
+	display: grid;
+	flex-direction: column;
+	justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100vh;
 }
 
 /* ===== Login form main ===== */
 
 .Login {
-	display: flex;
-	align-items: center;
+	display: grid;
 	justify-content: center;
 	height: 100%;
+	width: 100%;
 }
 
 /* ===== Logo ===== */
 
 .WelcomeToTiseClub {
-	width: 609px;
-	left: 655px;
-	top: 146px;
-	position: absolute;
 	text-align: center;
 }
 
 .WelcomeTo {
 	user-select: none;
+	line-height: 25px;
 	color: white;
 	font-size: 100px;
 	text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
@@ -52,6 +64,7 @@ body {
 .TiseClub {
 	user-select: none;
 	font-size: 110px;
+	line-height: 170px;
 	color:#00e9ff;
 	background: linear-gradient(120deg, #c500e8, #00e9ff);
 	background-clip: text;
@@ -60,26 +73,14 @@ body {
 	filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.25));
 }
 
-/* ===== Login form ===== */
-
-.Loginform {
-	width: 550px;
-	height: 272px;
-	left: 685px;
-	top: 474px;
-	position: absolute;
-}
-
 /* ===== Login input ===== */
 
 .LoginInput {
 	width: 550px;
 	height: 60px;
-	left: 0px;
-	top: 0px;
-	position: absolute;
 	background: rgba(0, 0, 0, 0.05);
 	border-radius: 50px;
+	margin-bottom: 16px;
 	overflow: hidden;
 }
 
@@ -105,11 +106,9 @@ body {
 .PasswordInput {
 	width: 550px;
 	height: 60px;
-	left: 0px;
-	top: 80px;
-	position: absolute;
 	background: rgba(0, 0, 0, 0.05);
 	border-radius: 50px;
+	margin-bottom: 16px;
 	overflow: hidden;
 }
 
@@ -118,14 +117,11 @@ body {
 .LoginButton {
 	width: 550px;
 	height: 60px;
-	left: 0px;
-	top: 160px;
-	position: absolute;
 	background: #C500E8;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 50px;
 	overflow: hidden;
-
+	margin-bottom: 16px;
 	user-select: none;
 	outline: 0;
 	border: 0;
@@ -141,13 +137,11 @@ body {
 	height: 30px;
 	left: 0px;
 	top: 240px;
-	position: absolute;
 }
 
 .RememberMe {
 	left: 219px;
 	top: 4px;
-	position: absolute;
 	text-align: center;
 	color: white;
 	font-size: 15px;

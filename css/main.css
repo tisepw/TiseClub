@@ -1,79 +1,163 @@
+/* ===== Main page ===== */
+
 @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
 * {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	height: 100%;
 }
 
 body {
-    background-image: url("../images/side-wave_background.png");
-    background-size: cover;
-    background-position: top;
-    font-family: 'Poppins';
+	background-image: url("../images/side-wave_background.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	font-family: 'Poppins';
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.PageWrapper {
+	display: grid;
+	flex-direction: column;
+	justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+/* ===== Login form main ===== */
+
+.Login {
+	display: grid;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+/* ===== Logo ===== */
+
+.WelcomeToTiseClub {
+	text-align: center;
 }
 
 .WelcomeTo {
-    user-select: none;
-    color: white;
-    font-size: 100px;
-    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+	user-select: none;
+	line-height: 25px;
+	color: white;
+	font-size: 100px;
+	text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .TiseClub {
-    user-select: none;
-    font-size: 110px;
-    color:#00e9ff;
-    background: linear-gradient(120deg, #c500e8, #00e9ff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.25));
+	user-select: none;
+	font-size: 110px;
+	line-height: 190px;
+	color:#00e9ff;
+	background: linear-gradient(120deg, #c500e8, #00e9ff);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.25));
+}
+
+/* ===== Login input ===== */
+
+.LoginInput {
+	width: 550px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.05);
+	border-radius: 50px;
+	margin-bottom: 16px;
+	overflow: hidden;
 }
 
 .LoginTextBox {
-    user-select: none;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    font-family: 'Poppins';
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    border: 0;
-    outline: 0;
+	user-select: none;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	font-family: 'Poppins';
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	border: 0;
+	outline: 0;
 }
 
 .LoginTextBox::placeholder {
-    color: rgba(255, 255, 255, 0.40);
+	color: rgba(255, 255, 255, 0.40);
 }
+
+/* ===== Password input ===== */
+
+.PasswordInput {
+	width: 550px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.05);
+	border-radius: 50px;
+	margin-bottom: 16px;
+	overflow: hidden;
+}
+
+/* ===== Login button ===== */
 
 .LoginButton {
-    user-select: none;
-    width: 100%;
-    height: 100%;
-    outline: 0;
-    border: 0;
-    background-color: transparent;
-    font-family: 'Poppins';
-    font-size: 20px;
-    color: white;
+	width: 550px;
+	height: 60px;
+	background: #C500E8;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 50px;
+	overflow: hidden;
+	margin-bottom: 16px;
+	user-select: none;
+	outline: 0;
+	border: 0;
+	font-family: 'Poppins';
+	font-size: 20px;
+	color: white;
 }
 
+/* ===== Remember me checkbox =====*/
+
+.RememberCheckbox {
+	width: 550px;
+	height: 30px;
+	left: 0px;
+	top: 240px;
+}
+
+.RememberMe {
+	left: 219px;
+	top: 4px;
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	text-decoration: underline;
+}
+
+/* ===== Additional attrobutes ===== */
+
 style attribute {
-    --text: #ffffff
-    --background: #510FEB;
-    --primary: #c500e8;
-    --secondary: #3a64c6;
-    --accent: #00e9ff;
+	--text: #ffffff
+	--background: #510FEB;
+	--primary: #c500e8;
+	--secondary: #3a64c6;
+	--accent: #00e9ff;
 }
 
 input:focus::placeholder {
-    color: transparent;
-  }
+	color: transparent;
+}

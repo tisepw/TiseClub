@@ -15,20 +15,42 @@
 				<span class="TiseClub">Tise Club</span>
 			</div>
 			<div class="Login">
-				<div class="Loginform">
+				<form class="Loginform" action="https://auth.tise.pw/login" method="post">
 					<div class="LoginInput">
-						<input type="text" class="LoginTextBox" placeholder="Login" maxlength="35">
+						<input type="text" name="login" class="LoginTextBox" placeholder="Login" maxlength="35">
 					</div>
 					<div class="PasswordInput">
-						<input type="password" class="LoginTextBox" placeholder="Password" maxlength="35">
+						<input type="password" name="password" class="LoginTextBox" placeholder="Password" maxlength="35">
 					</div>
-					<button class="LoginButton">Let’s go</button>
+					<button class="LoginButton" type="submit">Let’s go</button>
 					<div class="RememberCheckbox">
-						<div class="RememberMe">Remember me</div>
+						<input type="text" name="remember" id="rememered" hidden>
+						<input type="button" value="Remember me" class="RememberMe" id="rememerCheck" onclick="RememberMeToggle">
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
+
+	<script>
+		const rememerCheck = document.getElementById("rememerCheck");
+		const rememered = document.getElementById("rememered");
+		rememerCheck.addEventListener("click", RememberMeToggle);
+		function RememberMeToggle() {
+			if (rememerCheck.value == "Remember me")
+			{
+				rememered.value = "true";
+				rememerCheck.value = "Account will be remembered";
+				rememerCheck.className = "ForgetMe";
+			}
+			else
+			{
+				rememered.value = "false";
+				rememerCheck.value = "Remember me";
+				rememerCheck.className = "RememberMe";
+			}
+		}
+	</script>
+
 </body>
 </html>

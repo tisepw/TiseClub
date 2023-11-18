@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tise Club</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link href="./css/main.css" rel="stylesheet" type="text/css" media="screen">
+	<title>Tise Club</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="./css/main.css" rel="stylesheet" type="text/css" media="screen">
 </head>
-<body>
-  <div class="Login">
-    <div class="WelcomeToTiseClub" style="width: 609px; left: 655px; top: 146px; position: absolute; text-align: center">
-      <span class="WelcomeTo">Welcome to</span>
-      <span class="TiseClub">Tise Club</span>
-    </div>
-    <div class="Loginform" style="width: 550px; height: 272px; left: 685px; top: 474px; position: absolute">
-      <div class="Logintext" style="width: 550px; height: 60px; left: 0px; top: 0px; position: absolute; background: rgba(0, 0, 0, 0.05); border-radius: 50px; overflow: hidden">
-        <input type="text" class="LoginTextBox" placeholder="Login" maxlength="35">
-      </div>
-      <div class="Passwordtext" style="width: 550px; height: 60px; left: 0px; top: 80px; position: absolute; background: rgba(0, 0, 0, 0.05); border-radius: 50px; overflow: hidden">
-        <input type="password" class="LoginTextBox" placeholder="Password" maxlength="35">
-      </div>
-      <button class="LoginButton" style="width: 550px; height: 60px; left: 0px; top: 160px; position: absolute; background: #C500E8; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 50px; overflow: hidden">Let’s go</button>
-      <div class="Remembercheckbox" style="width: 550px; height: 30px; left: 0px; top: 240px; position: absolute">
-        <div class="Remembercheckbox" style="width: 255px; height: 23px; left: 148px; top: 4px; position: absolute">
-          <div class="RememberMe" style="left: 71px; top: 0px; position: absolute; text-align: center; color: white; font-size: 15px; text-decoration: underline">Remember me
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<body class>
+	<div>
+		<div class="PageWrapper">
+			<div></div>
+			<div class="WelcomeToTiseClub">
+				<span class="WelcomeTo">Welcome to</span>
+				<br>
+				<span class="TiseClub">Tise Club</span>
+			</div>
+			<div class="Login">
+				<form class="Loginform" action="https://auth.tise.pw/login" method="post">
+					<div class="LoginInput">
+						<input type="text" name="login" class="LoginTextBox" placeholder="Login" maxlength="35">
+					</div>
+					<div class="PasswordInput">
+						<input type="password" name="password" class="LoginTextBox" placeholder="Password" maxlength="35">
+					</div>
+					<button class="LoginButton" type="submit">Let’s go</button>
+					<div class="RememberCheckbox">
+						<input type="text" name="remember" id="rememered" hidden>
+						<input type="button" value="Remember me" class="RememberMe" id="rememerCheck" onclick="RememberMeToggle">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const rememerCheck = document.getElementById("rememerCheck");
+		const rememered = document.getElementById("rememered");
+		rememerCheck.addEventListener("click", RememberMeToggle);
+		function RememberMeToggle() {
+			if (rememerCheck.value == "Remember me")
+			{
+				rememered.value = "true";
+				rememerCheck.value = "Account will be remembered";
+				rememerCheck.className = "ForgetMe";
+			}
+			else
+			{
+				rememered.value = "false";
+				rememerCheck.value = "Remember me";
+				rememerCheck.className = "RememberMe";
+			}
+		}
+	</script>
+
 </body>
 </html>
